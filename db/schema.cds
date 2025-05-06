@@ -6,6 +6,13 @@ entity Products {
         Description : String(500);
         Price       : Decimal(10, 2);
         Stock       : Integer;
+        Category    : Association to ProductCategory;
+}
+
+entity ProductCategory {
+    key ID          : Integer;
+        Name        : String(100);
+        Description : String(500);
 }
 
 entity Orders {
